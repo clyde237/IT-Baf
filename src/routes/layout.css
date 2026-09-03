@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--color-it-green: #00923f;
+	--color-it-dark: #006b2e;
+	--color-it-pastel: #e8f5ee;
+	--color-it-slate: #0f172a;
+	--color-it-gray: #f8fafc;
+}
+
