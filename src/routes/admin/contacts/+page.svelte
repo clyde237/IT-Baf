@@ -68,57 +68,63 @@
 	<title>Répertoire des Contacts — IT Bafoussam</title>
 </svelte:head>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-6">
+<div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 pb-24 sm:pb-8 flex flex-col gap-5 sm:gap-6">
 	<!-- Top Bar / Title & Action Buttons -->
-	<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+	<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
 		<div>
-			<h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-				Répertoire & Gestion des Contacts
+			<h1 class="text-xl sm:text-3xl font-black text-slate-900 tracking-tight">
+				Répertoire & Contacts
 			</h1>
-			<p class="text-sm text-slate-500 mt-1">
-				Plateforme de suivi des participants et apprenants • Centre de Bafoussam
+			<p class="text-xs sm:text-sm text-slate-500 mt-0.5 sm:mt-1">
+				Suivi des participants et apprenants • Centre de Bafoussam
 			</p>
 		</div>
 
-		<div class="flex items-center gap-2">
-			<Button
-				href="/admin/sync"
-				variant="outline"
-				size="sm"
-			>
-				{#snippet children()}
-					<Upload class="w-4 h-4 text-slate-500 mr-1" />
-					<span>Importer Excel</span>
-				{/snippet}
-			</Button>
+		<div class="flex items-center gap-2 w-full sm:w-auto">
+			<div class="flex-1 sm:flex-none">
+				<Button
+					href="/admin/sync"
+					variant="outline"
+					size="sm"
+					fullWidth
+				>
+					{#snippet children()}
+						<Upload class="w-4 h-4 text-slate-500 mr-1" />
+						<span>Importer</span>
+					{/snippet}
+				</Button>
+			</div>
 
-			<Button
-				href="/api/export"
-				variant="primary"
-				size="sm"
-			>
-				{#snippet children()}
-					<Download class="w-4 h-4 mr-1" />
-					<span>Exporter (.xlsx)</span>
-				{/snippet}
-			</Button>
+			<div class="flex-1 sm:flex-none">
+				<Button
+					href="/api/export"
+					variant="primary"
+					size="sm"
+					fullWidth
+				>
+					{#snippet children()}
+						<Download class="w-4 h-4 mr-1" />
+						<span>Exporter (.xlsx)</span>
+					{/snippet}
+				</Button>
+			</div>
 		</div>
 	</div>
 
-	<!-- Dashboard Stat Cards -->
-	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+	<!-- Dashboard Stat Cards (2 columns on mobile, 4 on desktop) -->
+	<div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
 		<StatCard
 			title="Total Inscrits"
 			value={data.stats.total}
-			subtitle="Tous contacts confondus"
+			subtitle="Tous contacts"
 			icon={Users}
 			variant="it"
 		/>
 
 		<StatCard
-			title="Déjà en Classe IT"
+			title="Déjà en Classe"
 			value={data.stats.enClasse}
-			subtitle="Apprenants actifs"
+			subtitle="Apprenants"
 			icon={GraduationCap}
 			variant="slate"
 		/>
@@ -126,15 +132,15 @@
 		<StatCard
 			title="Souhaitent Intégrer"
 			value={data.stats.souhaiteClasse}
-			subtitle="Prospects prioritaires"
+			subtitle="Prospects"
 			icon={Sparkles}
 			variant="blue"
 		/>
 
 		<StatCard
-			title="Nouveaux Aujourd'hui"
+			title="Aujourd'hui"
 			value={data.stats.derniersInscritsAujourdhui}
-			subtitle="Inscriptions récentes"
+			subtitle="Nouveaux"
 			icon={UserPlus}
 			variant="amber"
 		/>

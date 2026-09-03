@@ -18,7 +18,7 @@
 	<title>Synchronisation Excel — IT Bafoussam</title>
 </svelte:head>
 
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-8">
+<div class="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 pb-24 sm:pb-8 flex flex-col gap-6 sm:gap-8">
 	<!-- Page Header -->
 	<div class="flex flex-col gap-1">
 		<span class="text-xs font-bold uppercase tracking-wider text-[#00923f]">Données & Exports</span>

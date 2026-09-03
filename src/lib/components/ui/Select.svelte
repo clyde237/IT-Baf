@@ -56,7 +56,7 @@
 			{required}
 			{disabled}
 			bind:value
-			class="w-full bg-white text-slate-900 border {error ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : 'border-slate-300 focus:border-[#00923f] focus:ring-[#00923f]/25'} rounded-xl px-3.5 py-3 text-sm min-h-[46px] outline-none transition-all duration-150 focus:ring-3 disabled:bg-slate-50 disabled:cursor-not-allowed appearance-none cursor-pointer pr-10"
+			class="w-full bg-white text-slate-900 border {error ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : 'border-slate-300 focus:border-[#00923f] focus:ring-[#00923f]/25'} rounded-xl px-3.5 py-3 text-base sm:text-sm min-h-[48px] outline-none transition-all duration-150 focus:ring-3 disabled:bg-slate-50 disabled:cursor-not-allowed appearance-none cursor-pointer pr-10"
 			{...rest}
 		>
 			{#if placeholder}
