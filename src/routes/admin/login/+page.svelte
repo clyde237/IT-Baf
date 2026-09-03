@@ -55,7 +55,7 @@
 							placeholder="Entrez le mot de passe admin..."
 							bind:value={password}
 							required
-							class="w-full bg-white text-slate-900 border border-slate-300 focus:border-[#00923f] focus:ring-3 focus:ring-[#00923f]/25 rounded-xl px-3.5 py-3 text-sm min-h-[46px] outline-none transition-all pr-11"
+							class="w-full bg-white text-slate-900 border border-slate-300 focus:border-[#00923f] focus:ring-3 focus:ring-[#00923f]/25 rounded-xl px-3.5 py-3 text-base sm:text-sm min-h-[48px] outline-none transition-all pr-11"
 						/>
 						<button
 							type="button"

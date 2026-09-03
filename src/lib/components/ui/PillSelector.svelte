@@ -60,7 +60,7 @@
 			<button
 				type="button"
 				onclick={() => select(opt.value)}
-				class="min-h-[44px] px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 flex flex-col items-center justify-center cursor-pointer border select-none active:scale-95 {isSelected
+				class="flex-1 min-w-[120px] min-h-[44px] px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 flex flex-col items-center justify-center text-center cursor-pointer border select-none active:scale-95 {isSelected
 					? 'bg-[#00923f] text-white border-[#00923f] shadow-sm shadow-[#00923f]/30 ring-2 ring-[#00923f]/20'
 					: 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'}"
 			>

@@ -115,31 +115,31 @@
 </script>
 
 {#if isOpen && contact}
-	<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in">
-		<div class="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-lg w-full overflow-hidden flex flex-col max-h-[90vh]">
+	<div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in">
+		<div class="bg-white rounded-t-3xl sm:rounded-3xl border border-slate-200 shadow-2xl max-w-lg w-full overflow-hidden flex flex-col max-h-[92vh]">
 			<!-- Modal Header -->
-			<div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
+			<div class="px-4 py-3.5 sm:px-6 sm:py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
 				<div class="flex flex-col">
-					<span class="text-xs font-bold uppercase tracking-wider text-[#00923f]">Fiche Contact</span>
-					<h3 class="text-lg font-extrabold text-slate-900">{contact.nom_prenom}</h3>
+					<span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#00923f]">Fiche Contact</span>
+					<h3 class="text-base sm:text-lg font-extrabold text-slate-900 truncate max-w-[260px] sm:max-w-none">{contact.nom_prenom}</h3>
 				</div>
 				<button
 					type="button"
 					onclick={onClose}
-					class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+					class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer min-h-[40px] min-w-[40px] flex items-center justify-center"
 				>
 					<X class="w-5 h-5" />
 				</button>
 			</div>
 
 			<!-- Direct Contact Buttons -->
-			<div class="px-6 py-3 bg-[#e8f5ee]/40 border-b border-emerald-100 flex items-center gap-3">
+			<div class="px-4 py-2.5 sm:px-6 sm:py-3 bg-[#e8f5ee]/40 border-b border-emerald-100 flex items-center gap-2 sm:gap-3">
 				<a
 					href="tel:{contact.telephone.replace(/[^\d+]/g, '')}"
-					class="flex-1 inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-white border border-[#00923f]/30 text-[#006b2e] font-semibold text-xs shadow-2xs hover:bg-[#e8f5ee] transition-colors"
+					class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-white border border-[#00923f]/30 text-[#006b2e] font-semibold text-xs shadow-2xs hover:bg-[#e8f5ee] transition-colors min-h-[40px]"
 				>
 					<Phone class="w-4 h-4 text-[#00923f]" />
-					<span>Appeler ({contact.telephone})</span>
+					<span>Appeler</span>
 				</a>
 
 				<a
@@ -154,7 +154,7 @@
 			</div>
 
 			<!-- Modal Body (Editable fields) -->
-			<div class="p-6 overflow-y-auto flex flex-col gap-4">
+			<div class="p-4 sm:p-6 overflow-y-auto flex flex-col gap-3.5 sm:gap-4">
 				{#if errorMsg}
 					<div class="p-3 bg-red-50 border border-red-200 text-red-700 text-xs rounded-xl font-medium">
 						{errorMsg}
@@ -238,7 +238,7 @@
 			</div>
 
 			<!-- Modal Footer -->
-			<div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+			<div class="px-4 py-3 sm:px-6 sm:py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
 				<button
 					type="button"
 					onclick={handleDelete}

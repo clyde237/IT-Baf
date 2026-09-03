@@ -43,20 +43,20 @@
 	};
 </script>
 
-<div class="bg-white rounded-2xl border border-slate-100 shadow-xs p-5 flex items-start justify-between gap-4 {className}">
-	<div class="flex flex-col gap-1">
-		<span class="text-xs font-medium text-slate-500 uppercase tracking-wider">{title}</span>
-		<span class="text-3xl font-extrabold {variantStyles[variant].val} tracking-tight">
+<div class="bg-white rounded-2xl border border-slate-100 shadow-xs p-3.5 sm:p-5 flex items-start justify-between gap-2.5 sm:gap-4 {className}">
+	<div class="flex flex-col gap-0.5 sm:gap-1">
+		<span class="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider line-clamp-1">{title}</span>
+		<span class="text-2xl sm:text-3xl font-black {variantStyles[variant].val} tracking-tight">
 			{value}
 		</span>
 		{#if subtitle}
-			<span class="text-xs text-slate-500 mt-1">{subtitle}</span>
+			<span class="text-[10px] sm:text-xs text-slate-400 mt-0.5 line-clamp-1">{subtitle}</span>
 		{/if}
 	</div>
 
 	{#if IconComponent}
-		<div class="w-12 h-12 rounded-xl flex items-center justify-center {variantStyles[variant].bg} shrink-0">
-			<IconComponent class="w-6 h-6" />
+		<div class="w-8 h-8 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center {variantStyles[variant].bg} shrink-0">
+			<IconComponent class="w-4 h-4 sm:w-6 sm:h-6" />
 		</div>
 	{/if}
 </div>
