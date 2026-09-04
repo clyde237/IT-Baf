@@ -83,9 +83,9 @@
 					{/snippet}
 				</Button>
 
-				<div class="bg-emerald-50/60 border border-emerald-100 rounded-xl p-3 text-[11px] text-[#006b2e] leading-relaxed">
+				<!--<div class="bg-emerald-50/60 border border-emerald-100 rounded-xl p-3 text-[11px] text-[#006b2e] leading-relaxed">
 					ℹ️ <strong>Accès par défaut :</strong> <code class="font-mono font-bold bg-white px-1 py-0.5 rounded border border-emerald-200">Tyrannus2026@</code> (modifiable dans <code class="font-mono">.env</code> avec <code class="font-mono">ADMIN_PASSWORD</code>).
-				</div>
+				</div>-->
 			</form>
 		</Card>
 
